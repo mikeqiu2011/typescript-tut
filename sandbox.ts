@@ -1,11 +1,15 @@
-let char = 'mike'
-let age = 30
+let names = ['mike', 'kevin', 'frank'] // types cannot change after declare
 
-// age = 'kevin' // you cannot do this
-age = 40 // you can do this
+names.push('eric') // fine
+// names.push(1) // will not compile
+// names[0] = 1 // not compile either
 
-const circ = (diameter: number) => { // strict type
-    return diameter * Math.PI
-}
+let mixed = ['mike', 1, 'kevin', 2, true] // declare is fine
 
-console.log(circ(1)); // now this will not compile
+// all work
+mixed.push('eric')
+mixed.push(4)
+mixed[0] = 0
+
+console.log(mixed);
+
