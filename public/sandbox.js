@@ -1,9 +1,10 @@
 "use strict";
-let greet;
-// optional argument/ default value arg shall be put at last
-const add = (a, b, c = 0) => {
-    return a + b + c;
+//normal ways to define type, but it is repetitive
+const logDetails = (uid) => {
+    console.log(`uid is ${uid}`);
 };
-const result = add(5, 10, 20);
-console.log(result);
-// result = 'mike' // not allow
+logDetails('200');
+const greet = (user) => {
+    console.log(`${user.name} says hello`);
+};
+greet({ name: 'mike', uid: 1 });

@@ -1,12 +1,11 @@
-let greet: Function;
+//normal ways to define type, but it is repetitive
+const logDetails = (uid: string | number) => {
+    console.log(`uid is ${uid}`);
+}
+logDetails('200')
 
-// optional argument/ default value arg shall be put at last
-const add = (a: number, b: number, c: number = 0): number => {
-    return a + b + c
+const greet = (user: { name: string, uid: string | number }) => {
+    console.log(`${user.name} says hello`);
 }
 
-const result = add(5, 10, 20)
-
-console.log(result);
-
-// result = 'mike' // not allow
+greet({ name: 'mike', uid: 1 })
