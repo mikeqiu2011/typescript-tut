@@ -20,9 +20,18 @@ interface Resource<T> {
     data: T;
 }
 
-const docThree: Resource<string> = {
+const docThree: Resource<object> = { // now is okay
     uid: 1,
     resourceName: "person",
-    data: { name: 'mike' } // this is not allowed
+    data: { name: 'mike' }
 }
+
+const docFour: Resource<string[]> = {
+    uid: 2,
+    resourceName: "shoppingList",
+    data: ['bread', 'milk']
+}
+
+console.log(docFour);
+
 

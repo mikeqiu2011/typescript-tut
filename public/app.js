@@ -10,5 +10,11 @@ console.log(docOne.age); // now we can access the name property of the obj
 const docThree = {
     uid: 1,
     resourceName: "person",
-    data: { name: 'mike' } // this is not allowed
+    data: { name: 'mike' }
 };
+const docFour = {
+    uid: 2,
+    resourceName: "shoppingList",
+    data: ['bread', 'milk']
+};
+console.log(docFour);
