@@ -1,19 +1,22 @@
-var ninja = {
+var age = 30; // reverse ts to js, no benifit of TS
+// all work
+age = 25;
+age = "25";
+age = [];
+age = true;
+age = {
     name: 'mike',
-    age: 30,
-    belt: 'black'
+    age: 10
 };
-// ninja.name = 1 // not compile
-ninja.name = 'kevin';
+var mixed = [];
+mixed.push('mike');
+mixed.push(1);
+var ninja;
 ninja = {
-    name: 'kevin',
-    age: 30,
-    belt: 'black'
+    name: 'mike',
+    age: 10
 };
-// this not
-// ninja = { 
-//     name: 'kevin',
-//     age: 30,
-//     belt2: 'black',
-//     address: 'shanghai'
-// }
+ninja = {
+    name: 10,
+    age: 'mike'
+};
