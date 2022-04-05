@@ -1,3 +1,9 @@
-let char = 'mike'
+let greet: Function;
 
-console.log(char);
+// optional argument
+const add = (a: number, b: number, c?: number | string) => {
+    console.log(a + b);
+
+}
+
+add(5, 10) 
