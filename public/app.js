@@ -1,11 +1,23 @@
 "use strict";
-// TS has no access to html, so the anchor might be null, thus anchor may
-// not have the href, as developer, if you are certain, you can add a "!"
-// const anchor = document.querySelector('a')!
-// console.log(anchor.href);
-// select by css class name and cast it into FORM
+// classes
+class Invoice {
+    constructor(client, details, amount) {
+        this.client = client;
+        this.details = details;
+        this.amount = amount;
+    }
+    format() {
+        return `${this.client} owes $${this.amount} for ${this.details}`;
+    }
+}
+const invOne = new Invoice('mike', 'gas fee', 100);
+const invTwo = new Invoice('kevin', 'food fee', 200);
+// console.log(invOne.format());
+let invoices = [];
+invoices.push(invOne);
+invoices.push(invTwo);
+invoices.forEach(inv => console.log(inv.format()));
 const form = document.querySelector('.new-item-form');
-// console.log(form.children)
 // select by id for the inputs
 const type = document.querySelector('#type');
 const tofrom = document.querySelector('#tofrom');
