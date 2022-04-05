@@ -12,8 +12,10 @@ const type = document.querySelector('#type') as HTMLInputElement;
 const tofrom = document.querySelector('#tofrom') as HTMLInputElement;
 const details = document.querySelector('#details') as HTMLInputElement;
 const amount = document.querySelector('#amount') as HTMLInputElement;
-const ul = document.querySelector(".item-list") as HTMLUListElement
-const listTemplate = new ListTemplate(ul)
+
+// list template instance
+const ul = document.querySelector('ul')!
+const list = new ListTemplate(ul)
 
 form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
@@ -25,7 +27,7 @@ form.addEventListener('submit', (e: Event) => {
         doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
     }
     // console.log(doc);
-    listTemplate.render(doc, 'headering', 'start')
+    list.render(doc, type.value, 'start')
 
 });
 
