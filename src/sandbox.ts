@@ -1,10 +1,12 @@
 let greet: Function;
 
-// optional argument
-const add = (a: number, b: number, c: number | string = 10) => {
-    console.log(a + b);
-    console.log(c);
-
+// optional argument/ default value arg shall be put at last
+const add = (a: number, b: number, c: number = 0): number => {
+    return a + b + c
 }
 
-add(5, 10) 
+const result = add(5, 10, 20)
+
+console.log(result);
+
+// result = 'mike' // not allow
