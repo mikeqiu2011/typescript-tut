@@ -1,15 +1,22 @@
-let names = ['mike', 'kevin', 'frank'] // types cannot change after declare
+let ninja = {
+    name: 'mike',
+    age: 30,
+    belt: 'black'
+}
 
-names.push('eric') // fine
-// names.push(1) // will not compile
-// names[0] = 1 // not compile either
+// ninja.name = 1 // not compile
+ninja.name = 'kevin'
 
-let mixed = ['mike', 1, 'kevin', 2, true] // declare is fine
+ninja = { // this works
+    name: 'kevin',
+    age: 30,
+    belt: 'black',
+}
 
-// all work
-mixed.push('eric')
-mixed.push(4)
-mixed[0] = 0
-
-console.log(mixed);
-
+// this not
+// ninja = { 
+//     name: 'kevin',
+//     age: 30,
+//     belt2: 'black',
+//     address: 'shanghai'
+// }
