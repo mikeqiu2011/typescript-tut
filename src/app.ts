@@ -16,6 +16,6 @@ const amount = document.querySelector('#amount') as HTMLInputElement
 // add event listener
 form.addEventListener('submit', (e) => {
     e.preventDefault()
-    console.log(type.value, tofrom.value, details.value, amount.value);
+    console.log(type.value, tofrom.value, details.value, amount.valueAsNumber);
 
 })
