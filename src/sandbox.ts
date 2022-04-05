@@ -1,10 +1,12 @@
-//normal ways to define type, but it is repetitive
-const logDetails = (uid: string | number) => {
+type StringOrNum = string | number
+type User = { name: string, uid: string | number }
+
+const logDetails = (uid: StringOrNum) => {
     console.log(`uid is ${uid}`);
 }
 logDetails('200')
 
-const greet = (user: { name: string, uid: string | number }) => {
+const greet = (user: User) => {
     console.log(`${user.name} says hello`);
 }
 

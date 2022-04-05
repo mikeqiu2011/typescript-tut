@@ -1,5 +1,4 @@
 "use strict";
-//normal ways to define type, but it is repetitive
 const logDetails = (uid) => {
     console.log(`uid is ${uid}`);
 };
