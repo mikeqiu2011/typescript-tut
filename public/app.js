@@ -1,21 +1,5 @@
-"use strict";
 // classes
-class Invoice {
-    // readonly client: string;
-    // private details: string;
-    // private amount: number;
-    constructor(client, details, amount) {
-        this.client = client;
-        this.details = details;
-        this.amount = amount;
-        this.client = client;
-        this.details = details;
-        this.amount = amount;
-    }
-    format() {
-        return `${this.client} owes $${this.amount} for ${this.details}`;
-    }
-}
+import { Invoice } from "./classes/Invoice.js";
 const invOne = new Invoice('mike', 'gas fee', 100);
 const invTwo = new Invoice('kevin', 'food fee', 200);
 // invOne.client = 'eric' // readonly property cannot be modified
