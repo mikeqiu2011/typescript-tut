@@ -31,3 +31,9 @@ const docFour = {
     data: ['bread', 'milk']
 };
 console.log(docFour);
+// tuples
+let arr = ['mike', 2, true];
+arr[0] = 1; //this is allowed
+let tup = ['mike', 30, true];
+tup[0] = 1; // not allowed
+tup[0] = "kevin"; // okay
