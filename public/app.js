@@ -7,5 +7,8 @@ const addUID = (obj) => {
 };
 let docOne = addUID({ name: 'mike', age: 30 });
 console.log(docOne.age); // now we can access the name property of the obj
-let docTwo = addUID({ age: 10 }); // this is allowed for generic though it does not make sense
-console.log(docTwo);
+const docThree = {
+    uid: 1,
+    resourceName: "person",
+    data: { name: 'mike' } // this is not allowed
+};

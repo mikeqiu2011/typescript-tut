@@ -9,7 +9,20 @@ const addUID = <T extends { name: string }>(obj: T) => { // it capture whatever 
 let docOne = addUID({ name: 'mike', age: 30 })
 console.log(docOne.age); // now we can access the name property of the obj
 
-let docTwo = addUID({ age: 10 }) // this is allowed for generic though it does not make sense
-console.log(docTwo);
+// let docTwo = addUID({ age: 10 }) // this is allowed for generic though it does not make sense
+// console.log(docTwo);
 
+
+// with interface
+interface Resource<T> {
+    uid: number;
+    resourceName: string;
+    data: T;
+}
+
+const docThree: Resource<string> = {
+    uid: 1,
+    resourceName: "person",
+    data: { name: 'mike' } // this is not allowed
+}
 
