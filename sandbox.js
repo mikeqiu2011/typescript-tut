@@ -1,5 +1,8 @@
-var character = 'kevin';
-console.log(character);
-var inputs = document.querySelectorAll('input');
-console.log(inputs);
-inputs.forEach(console.log);
+var char = 'mike';
+var age = 30;
+// age = 'kevin' // you cannot do this
+age = 40; // you can do this
+var circ = function (diameter) {
+    return diameter * Math.PI;
+};
+console.log(circ('hello')); // now this will not compile
