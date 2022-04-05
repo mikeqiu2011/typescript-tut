@@ -8,4 +8,4 @@ const circ = (diameter: number) => { // strict type
     return diameter * Math.PI
 }
 
-console.log(circ('hello')); // now this will not compile
+console.log(circ(1)); // now this will not compile
