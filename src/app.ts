@@ -1,5 +1,36 @@
+// interfaces
+interface IsPerson {
+    name: string;
+    age: number;
+    speak(a: string): void;
+    spend(a: number): number;
+}
+
+const me: IsPerson = {
+    name: "mike",
+    age: 30,
+    speak(text: string): void {
+        console.log(text + this.name);
+    },
+    spend: function (amount: number): number {
+        console.log(`I spent ${amount}`);
+        return amount
+    },
+    // skills: [] // this does not compile as it not apprear in interface
+};
+
+console.log(me)
+
+const greetPerson = (person: IsPerson) => {
+    console.log('hello ', person.name);
+
+}
+
+greetPerson(me)
+
+
 // classes
-import { Invoice } from "./classes/Invoice.js"
+import { Invoice } from "./classes/Invoice.js" // not TS but JS, otherwise browser does not know
 
 const invOne = new Invoice('mike', 'gas fee', 100)
 const invTwo = new Invoice('kevin', 'food fee', 200)

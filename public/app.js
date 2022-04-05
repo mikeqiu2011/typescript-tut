@@ -1,5 +1,22 @@
+const me = {
+    name: "mike",
+    age: 30,
+    speak(text) {
+        console.log(text + this.name);
+    },
+    spend: function (amount) {
+        console.log(`I spent ${amount}`);
+        return amount;
+    },
+    // skills: [] // this does not compile as it not apprear in interface
+};
+console.log(me);
+const greetPerson = (person) => {
+    console.log('hello ', person.name);
+};
+greetPerson(me);
 // classes
-import { Invoice } from "./classes/Invoice.js";
+import { Invoice } from "./classes/Invoice.js"; // not TS but JS, otherwise browser does not know
 const invOne = new Invoice('mike', 'gas fee', 100);
 const invTwo = new Invoice('kevin', 'food fee', 200);
 // invOne.client = 'eric' // readonly property cannot be modified
