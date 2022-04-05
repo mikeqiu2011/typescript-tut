@@ -13,22 +13,27 @@ console.log(docOne.age); // now we can access the name property of the obj
 // console.log(docTwo);
 
 
-// with interface
+// ENUMS
+// when log to console, the name will be in 0-5 as the array index
+enum ResourceType {
+    BOOK, AUTHOR, FILM, DIRECTOR, PERSON, FOOD
+}
+
 interface Resource<T> {
     uid: number;
-    resourceName: string;
+    resourceName: ResourceType;
     data: T;
 }
 
 const docThree: Resource<object> = { // now is okay
     uid: 1,
-    resourceName: "person",
+    resourceName: ResourceType.PERSON,
     data: { name: 'mike' }
 }
 
 const docFour: Resource<string[]> = {
     uid: 2,
-    resourceName: "shoppingList",
+    resourceName: ResourceType.FOOD,
     data: ['bread', 'milk']
 }
 
