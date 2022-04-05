@@ -1,10 +1,14 @@
 // classes
 class Invoice {
-    readonly client: string;
-    private details: string;
-    private amount: number;
+    // readonly client: string;
+    // private details: string;
+    // private amount: number;
 
-    constructor(client: string, details: string, amount: number) {
+    constructor(
+        readonly client: string,
+        private details: string,
+        public amount: number
+    ) {
         this.client = client;
         this.details = details;
         this.amount = amount
@@ -18,8 +22,8 @@ class Invoice {
 const invOne = new Invoice('mike', 'gas fee', 100)
 const invTwo = new Invoice('kevin', 'food fee', 200)
 
-invOne.client = 'eric' // readonly property cannot be modified
-invOne.amount = 150 // property by default is public, which is not safe, after made private, you cannot access it
+// invOne.client = 'eric' // readonly property cannot be modified
+// invOne.amount = 150 // property by default is public, which is not safe, after made private, you cannot access it
 
 // console.log(invOne.format());
 
