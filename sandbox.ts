@@ -1,8 +1,11 @@
-const character = 'kevin'
-console.log(character);
+let char = 'mike'
+let age = 30
 
-const inputs = document.querySelectorAll('input')
+// age = 'kevin' // you cannot do this
+age = 40 // you can do this
 
-console.log(inputs);
+const circ = (diameter) => { // this not error but not stricting the type it takes
+    return diameter * Math.PI
+}
 
-inputs.forEach(console.log)
+console.log(circ('hello')); // this will render NaN in run time
